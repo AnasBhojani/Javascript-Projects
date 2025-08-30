@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+.nav{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+.nav h3{
+    color: rgba(216, 72, 19, 0.788);
+    font-size: 25px;
+}
+.navlist {
+    list-style: none;
+    display: flex;
+    font-size: 23px;
+      gap: 27px;
+}
+.listitems i{
+    font-size: 30px;
+    color: rgba(216, 72, 19, 0.788);
+}
+.listitems:hover{
+    color: rgba(216, 72, 19, 0.788);
+    border-bottom: 1px solid rgba(216, 72, 19, 0);
+    transition: all 0.6s ease;
+}
+.cart-icon {
+   position: absolute;
+   top: 3px;
+   right: 8.9rem;
+    padding: 4px 5px;
+   background-color: rgba(216, 72, 19, 0.788);
+   border-radius: 100%;
+   font-size: 20px;
+   color: white;
+}
+.navsticky{
+    position: sticky;
+    top: 0;
+   background-color: white;
+    z-index: 1000;
+    animation: slideDown 0.5s ease-in-out;
+
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.product-sec{
+  
+    padding: 2rem;
+}
+.product-sec h2{
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 40px;
+}
+.product-sec h6{
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 18px;
+    color: rgba(216, 72, 19, 0.788);
+}
+.product-sec h3{
+    margin: 2rem 3rem;
+  
+    font-size: 32px;
+    
+    color: rgba(216, 72, 19, 0.788);
+}
+.AllProducts {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    flex-wrap: wrap;
+  
+}
+.product{
+  
+    display: flex;
+    width: 260px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 6px;
+    background: rgba(128, 128, 128, 0.062);
+}
+
+.details{
+    gap: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btnsec{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 10px;
+}
+.btnsec button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: grabbing;
+
+}
+.btnsec .add-to-cart{
+    background-color: red;
+}
+.btnsec .view-details{
+    color: black;
+    background-color: rgba(180, 197, 23, 0.918);
+}
+

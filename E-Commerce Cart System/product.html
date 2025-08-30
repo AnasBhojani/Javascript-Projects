@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+   
+     <script src="https://kit.fontawesome.com/bae1d8da68.js"
+      crossorigin="anonymous"></script>
+      
+   
+    <title>Product Details</title>
+</head>
+<body>
+    <i class="fa-solid fa-close" id="CloseBtn"></i>
+    <div class="ProductDetails">
+
+       <!--  <div class="productimage">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2B3wVrXpTaBhvmwoYwcH-M5wcomykUJxgGg&s" alt="">
+        </div>
+        <div class="details">
+
+
+    <h4>Name :</h4>
+    <h5 style="font-weight: 600; color: rgba(216, 72, 19, 0.788);"></h5>
+    <h4>Description :</h4>
+
+    <p></p> 
+    <h4>Price : </h4>
+    <h4>Category : </h4>
+   
+        <button class="add-to-cart">Add to Cart</button>
+
+        </div> -->
+
+
+    </div>
+
+
+
+
+    <script>
+        let closeBtn=document.querySelector("#CloseBtn");
+        closeBtn.addEventListener("click",()=>{
+            window.location.href = "index.html";
+        })
+    
+    let product="https://fakestoreapi.in/api/products"  
+let params=new URLSearchParams(window.location.search);
+let id=params.get("id");
+console.log(id);
+console.log("API Url",`${product}/${id}`);
+console.log(document.querySelector(".ProductDetails"));
+ 
+ 
+    
+      
+ async function fetchProductDetails(){
+    
+
+    if(!id){
+        document.querySelector(".ProductDetails").innerHTML=`
+        <p style="color: red;"> The ID of This Product is Not Found....!</p>`
+        return
+    }
+
+    try{
+        let response=await fetch(`${product}/${id}`);
+        let data=await response.json();
+     
+       console.log(data);
+
+      
+
+       
+       
+
+    
+
+    if(!data ||!data.product.id){
+            document.querySelector(".ProductDetails").innerHTML=`
+        <p style="color: red;"> The Data of This Product is Not Found....!</p>`
+       console.log("if cahloga");
+      
+       
+        }
+       else{
+        console.log("else chaloga");
+        let product=data.product;
+
+        
+           let div = document.querySelector(".ProductDetails");
+           div.innerHTML = `
+                <div class="productimage">
+                    <img src="${product.image}" alt="" width="300" height="100">
+                </div>
+                <div class="details">
+                    <h4>Name :</h4>
+                    <h5 style="font-weight: 600; color: rgba(216, 72, 19, 0.788);">${product.title}</h5>
+                    <h4>Description :</h4>
+                    <p>${product.description}</p> 
+                    <h4>Price : $${product.price}</h4>
+                    <h4>Category : ${product.category}</h4>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            `;
+            let addToCartBtn = div.querySelector(".add-to-cart");
+            addToCartBtn.addEventListener("click", () => {
+              alert("Product added to cart");
+            });
+
+
+    }
+}  
+       
+       catch(err){
+
+console.error("The errror in the code is",err);
+
+document.querySelector(".ProductDetails").innerHTML=`
+        <p style="color: red;"> The Error In The Code....!</p>`
+
+       }
+
+
+    
+      
+
+        
+
+    }
+
+fetchProductDetails()
+ 
+    </script>
+</body>
+</html>

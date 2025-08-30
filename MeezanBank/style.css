@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+.nav {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: blueviolet; */
+}
+.NavList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.listitems img {
+  height: 60px;
+}
+.listitems {
+  align-content: center;
+  padding: 10px;
+  border-right: 1px solid gray;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 18px;
+}
+.listitems:hover{
+  background-color: yellow;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.5s ease;
+  
+}
+.listitems input {
+  padding: 7px 20px;
+}
+.listitems input::placeholder {
+  font-weight: 600;
+}
+.listitems i {
+  padding-left: 7px;
+}
+#Date {
+  padding: 10px 20px;
+  color: purple;
+  font-size: 14px;
+}
+/* Navbar End */
+
+/* Hero Section Starts */
+.image-container{
+margin-top: 1rem;
+}
+.image-slider{
+  max-width: 1200px;
+  display: flex;
+  height: 500px;
+  overflow: hidden;
+  margin: auto;
+
+}
+.slide{
+  transition: 0.4s ease-in-out;
+ 
+}
+.boxes{
+  margin-top: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+.bubble{
+  height: 20px;
+  background-color:gray;
+  border: none;
+  border-radius: 100%;
+  width: 20px;
+
+}
+ .active{
+transform: scale(1.2);
+}
+
+
+
+
+.sidebar{
+  background-color: purple;
+  position: fixed;
+  right: 0%;
+  top: 20%;
+  padding: 10px;
+  border-radius: 10px;
+  transform: translateX(220px);
+  transition: all 0.7s ease;
+
+}
+.show{
+  transform: translate(0px);
+  cursor: pointer;
+  /*   transition: all 0.7s ease; */
+}
+.Sidebarlist{
+  list-style: none;
+  padding: 20px 0px;
+ 
+}
+.sidebar li{
+  padding: 10px 10px;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+}
+.sidebar i{
+ padding: 10px 8px;
+ font-size: 30px;
+ margin: 0px 10px;
+ border: 1px solid white;
+
+ 
+}
+
+
+.animatepara {
+background-color: #e4e0e0;
+border-radius: 20px;
+padding: 10px 10px;
+ /*  margin-top: 10px; */
+  display: flex;
+
+  font-size: 13px;
+  animation: para 10s 12s ease infinite alternate-reverse;
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+}
+.animatepara p {
+  font-weight: 700;
+  color: purple;
+  padding: 0px 3px;
+}
+@keyframes para {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* Animate Para Section End */
+.AccountDetails {
+  margin-top: 3rem;
+  padding: 10px 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.no1 img:hover {
+  cursor: pointer;
+}
+.no1,
+.no2,
+.no3,
+.no4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 20px;
+}
+.no1 h2,
+.no2 h2,
+.no3 h2,
+.no4 h2 {
+  color: purple;
+  margin-top: 10px;
+}
+.no1 p,
+.no2 p,
+.no3 p,
+.no4 p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.WTB {
+  margin-top: 2rem;
+  background-color: purple;
+   padding: 5px 5px; 
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+.WTB h3 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 900;
+  color: white;
+  margin-top: 4rem;
+
+  
+}
+.WTBaccs {
+  display: flex;
+/*  background-color: aqua;  */
+  margin-top: 6rem;
+ /*  justify-content:center; */
+
+  align-items: center;
+  padding: 5px 0px;
+gap: 10px;
+  margin-bottom: 3rem;
+}
+.WTBaccs i {
+  font-size: 80px;
+  color: white;
+  border-radius: 100%;
+ padding: 15% 20%;
+  transition: all 0.4s ease;
+  background-color: #999595;
+}
+.sec1,
+.sec2,
+
+.sec4,
+.sec5,
+.sec6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sec1 h4,
+.sec2 h4,
+
+.sec4 h4,
+.sec5 h4,
+.sec6 h4 {
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+ 
+  margin-top: 20px;
+}
+.sec1 p,
+.sec2 p,
+
+.sec4 p,
+.sec5 p,
+.sec6 p {
+  font-weight: 400;
+
+  padding: 0px 4px;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+
+.WTBaccs i:hover {
+  background-color: yellow;
+  color: #555;
+}
+/* Ways To Bank ends */
+.awards{
+  background-color: #ddd9d9;
+ height: 300px;
+ 
+
+}
+.awards h3{
+padding-top: 5rem;
+  text-align: center;
+  color: purple;
+  font-size: 30px;
+  text-decoration: underline;
+  margin-bottom: 2rem;
+
+}
+.imgsec{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ gap: 30px;
+ cursor: pointer;
+}
+.awards h4{
+  color: purple;
+  text-align: center;
+  font-weight: 400;
+  text-decoration: underline;
+  transition: all 0.4s ease;
+
+ 
+}
+.awards h4:hover{
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Awards Section Ends */
+.services{
+
+  margin-top:2rem;
+
+
+}
+
+.services h4{
+  text-align: center;
+  color: purple;
+  font-size: 30px;
+ 
+}
+/* Services Ends */
+
+
+/* Footer Section  */
+.buttonsec{
+   display: flex;
+   width: 100%;
+}
+.buttonsec button{
+  flex: 1 1 25%;
+  padding: 30px;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  border: 1px solid white;
+  box-sizing: border-box;
+background: purple;
+ 
+  cursor: pointer;
+}
+.buttonsec i{
+  padding: 0px 15px;
+   font-size: 30px;
+}
+.footer{
+   margin-top: 2rem; 
+  padding: 10px 30px;
+  display: flex;
+  justify-content:center;
+
+  gap: 3rem;
+}
+.footer ul{
+  font-weight: 700;
+  margin-top: 20px;
+  font-size: 15px;
+}
+.footer li{
+ margin-top: 12px;
+  font-weight: 300;
+  list-style: none;
+}
