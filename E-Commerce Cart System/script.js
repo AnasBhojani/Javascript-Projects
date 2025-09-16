@@ -3,6 +3,7 @@ let products="https://fakestoreapi.in/api/products";
 let users="https://api.escuelajs.co/api/v1/users";
 let cartCount=document.querySelector(".cart-icon");
 let closeBtn=document.querySelector("#CloseBtn");
+let cart=document.querySelector(".fa-shopping-cart")
 
 window.addEventListener("scroll",()=>{
     let nav=document.querySelector(".nav");
@@ -13,6 +14,9 @@ window.addEventListener("scroll",()=>{
     }
 })
 
+cart.addEventListener("click",()=>{
+    window.location.href=`cart.html`;
+})
 
 async function FetchProducts(){
     let response=await fetch(products);

@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Libertinus+Serif+Display&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+SA:wght@100..400&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Libertinus+Serif+Display&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+SA:wght@100..400&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Libertinus+Serif+Display&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+SA:wght@100..400&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+.class {
+  font-family: "Libertinus Serif Display", system-ui;
+  font-family: "Poppins", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poetsen One", sans-serif;
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+.searchinput {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav button {
+  border: none;
+  border-radius: 20px;
+  padding: 25px;
+  font-family: "Space Grotesk", sans-serif;
+  transition: 0.4s ease-in-out;
+}
+.straps{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.nav button:hover {
+  background-color: gold;
+  font-weight: 800;
+}
+
+.searchinput input {
+  padding: 15px 30px;
+  border-radius: 30px;
+  outline: none;
+  border: 0.4px solid rgb(99, 97, 97);
+}
+#cart-count {
+background-color: white;
+  color: black;
+  border-radius: 100%;
+  padding: 2px 4px;
+  font-size: 12px;
+position: absolute;
+top: 23%;
+right:  17.3%;
+color: black;
+
+}
+.herosection {
+  margin-top: 2rem;
+  padding: 20px;
+  /*   background-color: aqua; */
+
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.headingsec {
+  max-width: 45%;
+  font-family: "Space Grotesk", sans-serif;
+  align-items: center;
+}
+.headingsec h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 1rem 0;
+  color: gold;
+}
+.headingsec h2 {
+  font-size: 55px;
+}
+.headingsec button {
+  background-color: gold;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 30px;
+  font-family: "Space Grotesk", sans-serif;
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 24px;
+  align-items: center;
+}
+.imagesec {
+  display: flex;
+  position: relative;
+  width: 800px;
+
+  height: 600px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 200px 0 0 200px;
+  box-shadow: 0px 4px 15px white;
+  background: linear-gradient(70deg, gold,white);
+}
+
+.imagesec::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(45deg, #ecb8d7, #b4b2ee);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg); /* diamond shape */
+  opacity: 0.3;
+  animation: rotateRhombus 8s linear infinite;
+  z-index: 0; /* behind images */
+  border-radius: 20px;
+}
+
+@keyframes rotateRhombus {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(225deg) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(405deg) scale(1);
+  }
+}
+
+.imagesec img {
+  /*  width: 500px;
+    height: 400px;
+    padding: 0 40px; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+  object-fit: contain;
+
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.imagesec img.active {
+  opacity: 1;
+}
+.productsection{
+    margin-top: 2rem;
+    
+    padding: 20px;
+    
+}
+h1{
+    font-family:"Space Grotesk", sans-serif;
+    text-align: center;
+    font-size: 63px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.AllProducts{
+  margin: 2rem 0;
+background: linear-gradient(80deg ,gold);
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.product1{
+  background-color: white;
+  padding: 10px 20px;
+  width: 300px;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+  cursor: grabbing;
+ 
+}
+.product1:hover{
+  box-shadow: 0px 0px 15px 5px white;
+}
+.product1 img{
+max-width: 200px;
+margin: auto;
+}
+.product1 h2,h4{
+  color: gray;
+}
+.productdetails{
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Space Grotesk", sans-serif;
+   position: relative;
+}
+.productdetails p{
+  font-family: "Poppins", sans-serif;
+}
+.fav,.price{
+  display: flex;
+  justify-content: space-between;
+}
+
+.added{
+  
+  padding: 15px 25px;
+  border-radius: 20px;
+  background: #f0fff0;
+  color: green;
+  font-family: "Libertinus Serif Display", system-ui;
+  font-style: italic;
+  position: fixed;
+  top: -80px;   /* hidden */
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: top 0.4s ease-in-out;
+  z-index: 1000;
+}
+
+
+.added.show{
+ top: 20px;
+}
+.searchProduct{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 10px;
+ 
+}
+.searchProduct input{
+  padding: 16px 40px;
+  border-radius: 20px;
+  outline: none;
+  border: 0.4px solid rgb(99, 97, 97);
+}
+.searchProduct input:focus{
+  border: 1px solid gold;
+}
+.searchProduct input::placeholder{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.searchProduct button{
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: gold;
+  font-family: "Space Grotesk", sans-serif;
+  cursor: pointer;
+  font-weight: 700;
+}
+.favcolor{
+
+
+ cursor: pointer;
+ opacity: 0.7;
+color: red;
+ 
+  border-radius: 100%;
+  transition: 0.3s ease-in-out;
+ 
+}
+.view-details{
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: gold;
+  font-family: "Space Grotesk", sans-serif;
+  cursor: pointer;
+  font-weight: 700;
+  
+ 
+}
